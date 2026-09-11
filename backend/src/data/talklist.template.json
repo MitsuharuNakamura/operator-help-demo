@@ -1,0 +1,83 @@
+[
+  {
+    "id": "greeting",
+    "label": {
+      "ja": "挨拶と自己紹介",
+      "en": "Greeting & self-intro",
+      "zh": "问候与自我介绍"
+    },
+    "criteria": "オペレータが自社名と自分の名前を伝え、電話の目的を短く説明したか"
+  },
+  {
+    "id": "confirm_identity",
+    "label": {
+      "ja": "本人確認",
+      "en": "Confirm identity",
+      "zh": "确认本人"
+    },
+    "criteria": "顧客の氏名を確認し、本人であることを合意したか"
+  },
+  {
+    "id": "confirm_license",
+    "label": {
+      "ja": "保有資格の確認",
+      "en": "Confirm license",
+      "zh": "确认资格"
+    },
+    "criteria": "顧客の保有資格 (看護師/介護福祉士など) を明確に確認したか"
+  },
+  {
+    "id": "confirm_experience",
+    "label": {
+      "ja": "経験年数の確認",
+      "en": "Confirm experience",
+      "zh": "确认工作年数"
+    },
+    "criteria": "顧客の実務経験年数を確認したか"
+  },
+  {
+    "id": "ask_preferred_location",
+    "label": {
+      "ja": "希望勤務地のヒアリング",
+      "en": "Ask preferred location",
+      "zh": "询问期望工作地"
+    },
+    "criteria": "希望する勤務地 (都道府県、通勤範囲) を確認したか"
+  },
+  {
+    "id": "ask_employment_type",
+    "label": {
+      "ja": "希望雇用形態のヒアリング",
+      "en": "Ask employment type",
+      "zh": "询问期望雇佣形式"
+    },
+    "criteria": "常勤/非常勤/派遣/契約 など希望する雇用形態を確認したか"
+  },
+  {
+    "id": "ask_night_shift",
+    "label": {
+      "ja": "夜勤可否のヒアリング",
+      "en": "Ask about night shift",
+      "zh": "询问是否可夜班"
+    },
+    "criteria": "夜勤の可否について確認したか"
+  },
+  {
+    "id": "ask_wage",
+    "label": {
+      "ja": "希望時給/年収のヒアリング",
+      "en": "Ask wage expectation",
+      "zh": "询问期望时薪或年薪"
+    },
+    "criteria": "希望する時給・給与レンジを確認したか"
+  },
+  {
+    "id": "propose_next_step",
+    "label": {
+      "ja": "次のステップ提案",
+      "en": "Propose next step",
+      "zh": "提出下一步"
+    },
+    "criteria": "面談日程、面接、資料送付など次のアクションを合意したか"
+  }
+]

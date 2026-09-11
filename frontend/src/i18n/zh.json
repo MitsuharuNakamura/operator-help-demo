@@ -1,0 +1,175 @@
+{
+  "app": {
+    "title": "坐席辅助演示",
+    "subtitle": "Twilio Voice + Conversation Intelligence"
+  },
+  "login": {
+    "heading": "登录",
+    "nameLabel": "坐席姓名",
+    "namePlaceholder": "例) 山田",
+    "continue": "继续"
+  },
+  "setup": {
+    "heading": "初始设置",
+    "language": "显示语言",
+    "transcription": {
+      "heading": "实时转写 (UI 用)",
+      "note": "配置流向中间面板的转写。用于 CI 判定的转写 (Conversations) 由 Twilio 自动处理,此处无法修改。",
+      "engine": "提供商",
+      "speechModel": "模型",
+      "speechModelHint": "不同模型支持的语言和功能不同",
+      "hintsEnabled": "启用领域词汇 (Hints)",
+      "hintsEnabledHint": "预置 100+ 医疗/人才词汇提升识别精度",
+      "hintsExtra": "追加词汇 (逗号分隔,可选)",
+      "hintsExtraPlaceholder": "例: 圣路加医院,虎之门医院",
+      "hintsIncompat": "⚠️ Google 的 telephony 模型不支持 hints",
+      "hintsBaseline": "内置词汇: {{count}} 个",
+      "hintsShow": "查看全部",
+      "hintsHide": "折叠",
+      "engines": {
+        "google": "Google",
+        "deepgram": "Deepgram"
+      },
+      "models": {
+        "long": "long (通话向,支持 hints)",
+        "telephony": "telephony (低延迟,不支持 hints)",
+        "short": "short (短语向)",
+        "nova-3-general": "nova-3-general (Deepgram 最新)",
+        "nova-2": "nova-2 (Deepgram 基本)"
+      }
+    },
+    "micHint": "点击继续时会请求麦克风权限",
+    "continue": "进入主界面"
+  },
+  "top": {
+    "call": "呼叫",
+    "hangup": "挂断",
+    "mute": "静音",
+    "unmute": "取消静音",
+    "contacts": "联系人",
+    "phonePlaceholder": "+8190...",
+    "status": {
+      "idle": "空闲",
+      "dialing": "拨号中",
+      "ringing": "响铃中",
+      "connected": "通话中",
+      "muted": "静音中",
+      "ended": "已结束",
+      "failed": "失败"
+    },
+    "settings": "设置",
+    "logout": "登出"
+  },
+  "contactsManager": {
+    "heading": "联系人管理",
+    "empty": "还没有联系人",
+    "addHeading": "添加新联系人",
+    "identityHeading": "基本信息 (必填)",
+    "traitsHeading": "候选人信息 (可选 / 通话中自动更新)",
+    "name": "姓名",
+    "namePlaceholder": "例: 田中 花子",
+    "furigana": "假名读音",
+    "furiganaPlaceholder": "例: たなか はなこ",
+    "phone": "电话号码 (E.164)",
+    "phonePlaceholder": "+819012345678",
+    "optional": "可选",
+    "pickOne": "未选择",
+    "yes": "可",
+    "no": "不可",
+    "add": "添加",
+    "delete": "删除",
+    "select": "选择",
+    "confirmDelete": "将删除该联系人及其 Memory,继续吗?",
+    "invalidPhone": "电话号码需为 E.164 格式,以 + 开头",
+    "duplicatePhone": "该号码已注册",
+    "close": "关闭"
+  },
+  "profile": {
+    "heading": "通话对象",
+    "phone": "电话",
+    "notes": "备注",
+    "memory": "会话记忆",
+    "traits": "候选人信息",
+    "observations": "过往通话观察",
+    "summaries": "摘要",
+    "empty": "请选择联系人",
+    "noMemory": "暂无通话记录"
+  },
+  "traitGroups": {
+    "Contact": "联系信息",
+    "Candidate": "候选人信息"
+  },
+  "traitFields": {
+    "Contact": {
+      "firstName": "名",
+      "lastName": "姓",
+      "phone": "电话",
+      "email": "邮箱",
+      "city": "城市"
+    },
+    "Candidate": {
+      "license": "持有资格",
+      "experienceYears": "工作年数",
+      "preferredPrefecture": "期望工作地(都道府县)",
+      "preferredCity": "期望工作地(市区)",
+      "preferredEmploymentType": "期望雇佣形式",
+      "wantsNightShift": "是否可夜班",
+      "hourlyWageMinJpy": "期望时薪(下限)",
+      "furigana": "假名读音",
+      "tags": "标签"
+    }
+  },
+  "traitValues": {
+    "employmentType": {
+      "full_time": "全职",
+      "part_time": "兼职",
+      "contract": "合同工",
+      "dispatch": "派遣"
+    },
+    "yes": "可",
+    "no": "不可"
+  },
+  "checklist": {
+    "heading": "需确认信息",
+    "empty": "未获取",
+    "confirmed": "已获取",
+    "manual": "手动",
+    "auto": "AI 提取",
+    "save": "保存到 Memory",
+    "saving": "保存中...",
+    "saved": "已保存",
+    "saveError": "保存失败",
+    "selectContact": "请先选择联系人",
+    "unset": "未设置",
+    "pickOne": "未选择"
+  },
+  "talklist": {
+    "heading": "接下来要谈的内容",
+    "done": "完成",
+    "pending": "待完成"
+  },
+  "jobs": {
+    "heading": "推荐职位",
+    "empty": "提取到属性后将显示推荐",
+    "wage": "时薪",
+    "location": "工作地",
+    "reasons": "匹配理由"
+  },
+  "transcript": {
+    "heading": "实时转写",
+    "empty": "通话开始后将显示",
+    "agent": "坐席",
+    "customer": "客户"
+  },
+  "postCall": {
+    "heading": "通话后 CI 洞察",
+    "summary": "总结",
+    "sentiment": "情感",
+    "close": "关闭"
+  },
+  "errors": {
+    "callFailed": "呼叫失败",
+    "micDenied": "需要麦克风权限",
+    "wsDown": "与服务器的连接断开"
+  }
+}

@@ -1,0 +1,175 @@
+{
+  "app": {
+    "title": "オペレータ支援デモ",
+    "subtitle": "Twilio Voice + Conversation Intelligence"
+  },
+  "login": {
+    "heading": "ログイン",
+    "nameLabel": "オペレータ名",
+    "namePlaceholder": "例) 山田",
+    "continue": "続ける"
+  },
+  "setup": {
+    "heading": "初期設定",
+    "language": "表示言語",
+    "transcription": {
+      "heading": "リアルタイム文字起こし (UI用)",
+      "note": "UI 中央パネルに流れる文字起こしの設定です。CI 判定用 (Conversations) の文字起こしは Twilio 側で自動処理されるためここでは変更できません。",
+      "engine": "プロバイダー",
+      "speechModel": "モデル",
+      "speechModelHint": "モデルにより対応言語や機能が異なります",
+      "hintsEnabled": "ドメイン語彙 (Hints) を有効化",
+      "hintsEnabledHint": "医療・人材業界の 100+ 単語を先渡しして精度を上げる",
+      "hintsExtra": "追加語彙 (comma 区切り、任意)",
+      "hintsExtraPlaceholder": "例) 聖路加国際病院,虎の門病院",
+      "hintsIncompat": "⚠️ Google の telephony モデルは hints をサポートしません",
+      "hintsBaseline": "組み込み語彙: {{count}} 語",
+      "hintsShow": "内容を確認",
+      "hintsHide": "閉じる",
+      "engines": {
+        "google": "Google",
+        "deepgram": "Deepgram"
+      },
+      "models": {
+        "long": "long (通話向け、hints 対応)",
+        "telephony": "telephony (低遅延、hints 非対応)",
+        "short": "short (短発話向け)",
+        "nova-3-general": "nova-3-general (Deepgram 最新)",
+        "nova-2": "nova-2 (Deepgram 標準)"
+      }
+    },
+    "micHint": "続行時にマイク許可のダイアログが出ます",
+    "continue": "メイン画面へ"
+  },
+  "top": {
+    "call": "発信",
+    "hangup": "切断",
+    "mute": "ミュート",
+    "unmute": "ミュート解除",
+    "contacts": "連絡先",
+    "phonePlaceholder": "+8190...",
+    "status": {
+      "idle": "待機中",
+      "dialing": "発信中",
+      "ringing": "呼び出し中",
+      "connected": "通話中",
+      "muted": "ミュート中",
+      "ended": "終了",
+      "failed": "失敗"
+    },
+    "settings": "設定",
+    "logout": "ログアウト"
+  },
+  "contactsManager": {
+    "heading": "連絡先の管理",
+    "empty": "連絡先がありません",
+    "addHeading": "新しい連絡先を登録",
+    "identityHeading": "基本情報 (必須)",
+    "traitsHeading": "候補者情報 (任意 / 通話中に自動更新)",
+    "name": "名前",
+    "namePlaceholder": "例) 田中 花子",
+    "furigana": "ふりがな",
+    "furiganaPlaceholder": "例) たなか はなこ",
+    "phone": "電話番号 (E.164)",
+    "phonePlaceholder": "+819012345678",
+    "optional": "任意",
+    "pickOne": "選択なし",
+    "yes": "可",
+    "no": "不可",
+    "add": "登録",
+    "delete": "削除",
+    "select": "選択",
+    "confirmDelete": "この連絡先と Memory を削除します。よろしいですか？",
+    "invalidPhone": "電話番号は E.164 形式で + から始めてください",
+    "duplicatePhone": "この番号は既に登録されています",
+    "close": "閉じる"
+  },
+  "profile": {
+    "heading": "通話相手",
+    "phone": "電話番号",
+    "notes": "メモ",
+    "memory": "会話メモリ",
+    "traits": "候補者情報",
+    "observations": "過去通話からの観察",
+    "summaries": "サマリ",
+    "empty": "連絡先を選択してください",
+    "noMemory": "まだ通話履歴なし"
+  },
+  "traitGroups": {
+    "Contact": "連絡先",
+    "Candidate": "候補者情報"
+  },
+  "traitFields": {
+    "Contact": {
+      "firstName": "名",
+      "lastName": "姓",
+      "phone": "電話番号",
+      "email": "メール",
+      "city": "都市"
+    },
+    "Candidate": {
+      "license": "保有資格",
+      "experienceYears": "経験年数",
+      "preferredPrefecture": "希望勤務地 (都道府県)",
+      "preferredCity": "希望勤務地 (市区町村)",
+      "preferredEmploymentType": "希望雇用形態",
+      "wantsNightShift": "夜勤可否",
+      "hourlyWageMinJpy": "希望時給 (下限)",
+      "furigana": "ふりがな",
+      "tags": "タグ"
+    }
+  },
+  "traitValues": {
+    "employmentType": {
+      "full_time": "常勤",
+      "part_time": "パート",
+      "contract": "契約",
+      "dispatch": "派遣"
+    },
+    "yes": "可",
+    "no": "不可"
+  },
+  "checklist": {
+    "heading": "確認項目",
+    "empty": "未取得",
+    "confirmed": "取得済み",
+    "manual": "手動",
+    "auto": "AI 抽出",
+    "save": "Memory に保存",
+    "saving": "保存中...",
+    "saved": "保存しました",
+    "saveError": "保存に失敗しました",
+    "selectContact": "先に連絡先を選択してください",
+    "unset": "未設定",
+    "pickOne": "選択なし"
+  },
+  "talklist": {
+    "heading": "次に会話すべきリスト",
+    "done": "完了",
+    "pending": "未完了"
+  },
+  "jobs": {
+    "heading": "提案する求人",
+    "empty": "属性が抽出されると表示されます",
+    "wage": "時給",
+    "location": "勤務地",
+    "reasons": "マッチ理由"
+  },
+  "transcript": {
+    "heading": "リアルタイム文字起こし",
+    "empty": "通話が開始されると表示されます",
+    "agent": "オペレータ",
+    "customer": "顧客"
+  },
+  "postCall": {
+    "heading": "通話後 CI インサイト",
+    "summary": "要約",
+    "sentiment": "感情",
+    "close": "閉じる"
+  },
+  "errors": {
+    "callFailed": "発信に失敗しました",
+    "micDenied": "マイクの許可が必要です",
+    "wsDown": "サーバーとの接続が切れました"
+  }
+}

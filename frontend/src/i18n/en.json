@@ -1,0 +1,175 @@
+{
+  "app": {
+    "title": "Operator Assist Demo",
+    "subtitle": "Twilio Voice + Conversation Intelligence"
+  },
+  "login": {
+    "heading": "Sign in",
+    "nameLabel": "Operator name",
+    "namePlaceholder": "e.g. Yamada",
+    "continue": "Continue"
+  },
+  "setup": {
+    "heading": "Initial setup",
+    "language": "Display language",
+    "transcription": {
+      "heading": "Live transcription (UI)",
+      "note": "Configures the transcription that streams to the middle UI panel. The CI-side transcription (Conversations) is handled by Twilio and can't be changed here.",
+      "engine": "Provider",
+      "speechModel": "Model",
+      "speechModelHint": "Language and feature support vary by model",
+      "hintsEnabled": "Enable domain hints",
+      "hintsEnabledHint": "Boost recognition with 100+ medical/staffing vocabulary",
+      "hintsExtra": "Extra hints (comma-separated, optional)",
+      "hintsExtraPlaceholder": "e.g. St. Luke's Hospital,Toranomon Hospital",
+      "hintsIncompat": "⚠️ Google 'telephony' model does not support hints",
+      "hintsBaseline": "Built-in vocabulary: {{count}} words",
+      "hintsShow": "Show all",
+      "hintsHide": "Hide",
+      "engines": {
+        "google": "Google",
+        "deepgram": "Deepgram"
+      },
+      "models": {
+        "long": "long (phone calls, hints OK)",
+        "telephony": "telephony (low latency, no hints)",
+        "short": "short (short utterances)",
+        "nova-3-general": "nova-3-general (Deepgram latest)",
+        "nova-2": "nova-2 (Deepgram baseline)"
+      }
+    },
+    "micHint": "You will be prompted for microphone permission",
+    "continue": "Go to main"
+  },
+  "top": {
+    "call": "Call",
+    "hangup": "Hang up",
+    "mute": "Mute",
+    "unmute": "Unmute",
+    "contacts": "Contacts",
+    "phonePlaceholder": "+8190...",
+    "status": {
+      "idle": "Idle",
+      "dialing": "Dialing",
+      "ringing": "Ringing",
+      "connected": "Connected",
+      "muted": "Muted",
+      "ended": "Ended",
+      "failed": "Failed"
+    },
+    "settings": "Settings",
+    "logout": "Log out"
+  },
+  "contactsManager": {
+    "heading": "Manage contacts",
+    "empty": "No contacts yet",
+    "addHeading": "Add a new contact",
+    "identityHeading": "Identity (required)",
+    "traitsHeading": "Candidate profile (optional / auto-updates during a call)",
+    "name": "Name",
+    "namePlaceholder": "e.g. Jane Tanaka",
+    "furigana": "Furigana",
+    "furiganaPlaceholder": "e.g. tanaka hanako",
+    "phone": "Phone (E.164)",
+    "phonePlaceholder": "+819012345678",
+    "optional": "optional",
+    "pickOne": "not set",
+    "yes": "OK",
+    "no": "No",
+    "add": "Add",
+    "delete": "Delete",
+    "select": "Select",
+    "confirmDelete": "Delete this contact and its Memory. Continue?",
+    "invalidPhone": "Phone must be E.164 (start with +)",
+    "duplicatePhone": "This phone number is already registered",
+    "close": "Close"
+  },
+  "profile": {
+    "heading": "Caller",
+    "phone": "Phone",
+    "notes": "Notes",
+    "memory": "Conversation memory",
+    "traits": "Candidate profile",
+    "observations": "Observations from past calls",
+    "summaries": "Summaries",
+    "empty": "Select a contact",
+    "noMemory": "No call history yet"
+  },
+  "traitGroups": {
+    "Contact": "Contact",
+    "Candidate": "Candidate profile"
+  },
+  "traitFields": {
+    "Contact": {
+      "firstName": "First name",
+      "lastName": "Last name",
+      "phone": "Phone",
+      "email": "Email",
+      "city": "City"
+    },
+    "Candidate": {
+      "license": "License",
+      "experienceYears": "Experience (yr)",
+      "preferredPrefecture": "Preferred prefecture",
+      "preferredCity": "Preferred city",
+      "preferredEmploymentType": "Employment type",
+      "wantsNightShift": "Night shift OK?",
+      "hourlyWageMinJpy": "Min hourly wage (JPY)",
+      "furigana": "Furigana",
+      "tags": "Tags"
+    }
+  },
+  "traitValues": {
+    "employmentType": {
+      "full_time": "Full-time",
+      "part_time": "Part-time",
+      "contract": "Contract",
+      "dispatch": "Dispatch"
+    },
+    "yes": "Yes",
+    "no": "No"
+  },
+  "checklist": {
+    "heading": "Info to confirm",
+    "empty": "not yet",
+    "confirmed": "captured",
+    "manual": "manual",
+    "auto": "AI extract",
+    "save": "Save to Memory",
+    "saving": "Saving…",
+    "saved": "Saved",
+    "saveError": "Save failed",
+    "selectContact": "Select a contact first",
+    "unset": "unset",
+    "pickOne": "not set"
+  },
+  "talklist": {
+    "heading": "Next things to say",
+    "done": "Done",
+    "pending": "Pending"
+  },
+  "jobs": {
+    "heading": "Recommended jobs",
+    "empty": "Suggestions will appear once caller attributes are extracted",
+    "wage": "Hourly",
+    "location": "Location",
+    "reasons": "Why matched"
+  },
+  "transcript": {
+    "heading": "Live transcript",
+    "empty": "Transcript will appear once the call starts",
+    "agent": "Agent",
+    "customer": "Customer"
+  },
+  "postCall": {
+    "heading": "Post-call CI insights",
+    "summary": "Summary",
+    "sentiment": "Sentiment",
+    "close": "Close"
+  },
+  "errors": {
+    "callFailed": "Failed to start call",
+    "micDenied": "Microphone permission required",
+    "wsDown": "Disconnected from server"
+  }
+}

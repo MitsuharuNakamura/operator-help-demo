@@ -1,0 +1,67 @@
+[
+  {
+    "id": "license",
+    "label": {
+      "ja": "保有資格",
+      "en": "License",
+      "zh": "持有资格"
+    },
+    "extractionKey": "license",
+    "extractionHint": "正看護師 / 准看護師 / 介護福祉士 / ヘルパー など"
+  },
+  {
+    "id": "experience_years",
+    "label": {
+      "ja": "経験年数",
+      "en": "Experience (years)",
+      "zh": "工作经验(年)"
+    },
+    "extractionKey": "experienceYears"
+  },
+  {
+    "id": "preferred_prefecture",
+    "label": {
+      "ja": "希望勤務地 (都道府県)",
+      "en": "Preferred prefecture",
+      "zh": "期望工作地(都道府县)"
+    },
+    "extractionKey": "preferredPrefecture"
+  },
+  {
+    "id": "preferred_city",
+    "label": {
+      "ja": "希望勤務地 (市区町村)",
+      "en": "Preferred city",
+      "zh": "期望工作地(市区)"
+    },
+    "extractionKey": "preferredCity"
+  },
+  {
+    "id": "employment_type",
+    "label": {
+      "ja": "希望雇用形態",
+      "en": "Employment type",
+      "zh": "期望雇佣形式"
+    },
+    "extractionKey": "preferredEmploymentType",
+    "extractionHint": "full_time / part_time / contract / dispatch"
+  },
+  {
+    "id": "night_shift",
+    "label": {
+      "ja": "夜勤可否",
+      "en": "Night shift OK?",
+      "zh": "是否可夜班"
+    },
+    "extractionKey": "wantsNightShift"
+  },
+  {
+    "id": "hourly_wage_min",
+    "label": {
+      "ja": "希望時給 (下限)",
+      "en": "Min hourly wage (JPY)",
+      "zh": "期望时薪(下限)"
+    },
+    "extractionKey": "hourlyWageMinJpy"
+  }
+]

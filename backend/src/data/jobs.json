@@ -1,0 +1,352 @@
+[
+  {
+    "id": "job-001",
+    "title": "総合病院 病棟看護師 (常勤)",
+    "location": { "prefecture": "東京都", "city": "新宿区" },
+    "employmentType": "full_time",
+    "hourlyWageJpy": [2000, 2500],
+    "requirements": { "license": ["RN"], "experienceYears": 3, "nightShift": true },
+    "tags": ["急性期", "病棟", "教育制度あり", "住宅手当"],
+    "description": {
+      "ja": "急性期病棟での看護業務。夜勤月4回程度。住宅手当あり。年間休日120日。",
+      "en": "Ward nurse at acute-care hospital. ~4 night shifts/month. Housing allowance.",
+      "zh": "急诊病房护士,每月约4次夜班,提供住房补贴。"
+    }
+  },
+  {
+    "id": "job-002",
+    "title": "内科クリニック 外来看護師 (パート)",
+    "location": { "prefecture": "東京都", "city": "渋谷区" },
+    "employmentType": "part_time",
+    "hourlyWageJpy": [1800, 2100],
+    "requirements": { "license": ["RN", "LPN"], "nightShift": false },
+    "tags": ["クリニック", "日勤のみ", "駅近", "残業少"],
+    "description": {
+      "ja": "内科クリニック外来。日勤のみ、残業ほぼなし。週3日から相談可。",
+      "en": "Outpatient clinic (internal medicine). Day shift only. 3 days/wk OK.",
+      "zh": "内科门诊,仅日班,可从每周3天商谈。"
+    }
+  },
+  {
+    "id": "job-003",
+    "title": "特別養護老人ホーム 介護スタッフ",
+    "location": { "prefecture": "神奈川県", "city": "横浜市" },
+    "employmentType": "full_time",
+    "hourlyWageJpy": [1500, 1800],
+    "requirements": { "license": ["care_worker"], "experienceYears": 1, "nightShift": true },
+    "tags": ["特養", "夜勤あり", "資格取得支援", "託児所あり"],
+    "description": {
+      "ja": "特別養護老人ホームでの介護業務。夜勤あり。介護福祉士資格取得支援あり。",
+      "en": "Special nursing home care worker. Night shifts. License support offered.",
+      "zh": "特别养护老人院护理岗,含夜班,提供资格取得支援。"
+    }
+  },
+  {
+    "id": "job-004",
+    "title": "訪問看護ステーション 看護師 (常勤)",
+    "location": { "prefecture": "千葉県", "city": "船橋市" },
+    "employmentType": "full_time",
+    "hourlyWageJpy": [2200, 2800],
+    "requirements": { "license": ["RN"], "experienceYears": 5, "nightShift": false },
+    "tags": ["訪問看護", "オンコールなし", "車支給", "土日休み"],
+    "description": {
+      "ja": "在宅療養者を対象とした訪問看護。オンコール免除相談可。マイカー支給。",
+      "en": "Home-visit nursing. On-call rotation negotiable. Company car provided.",
+      "zh": "居家护理服务,可协商是否值班,配备公司车辆。"
+    }
+  },
+  {
+    "id": "job-005",
+    "title": "デイサービス 介護職員 (パート)",
+    "location": { "prefecture": "埼玉県", "city": "さいたま市" },
+    "employmentType": "part_time",
+    "hourlyWageJpy": [1400, 1600],
+    "requirements": { "license": ["care_worker"], "nightShift": false },
+    "tags": ["デイサービス", "日勤のみ", "土日休み可", "駅近"],
+    "description": {
+      "ja": "デイサービス施設での介護補助。日勤のみ、土日休み相談可。",
+      "en": "Day-care service assistance. Weekdays only, weekends negotiable.",
+      "zh": "日间照护中心护理助理,仅日班,可商谈周末休息。"
+    }
+  },
+  {
+    "id": "job-006",
+    "title": "急性期病院 手術室看護師 (夜勤なし)",
+    "location": { "prefecture": "東京都", "city": "港区" },
+    "employmentType": "full_time",
+    "hourlyWageJpy": [2500, 3200],
+    "requirements": { "license": ["RN"], "experienceYears": 5, "nightShift": false },
+    "tags": ["急性期", "オペ室", "夜勤なし", "教育充実"],
+    "description": {
+      "ja": "手術室配属の看護師。日勤帯のみのシフト。オペ経験優遇、教育制度充実。",
+      "en": "Operating-room nurse. Day-shift only. OR experience preferred.",
+      "zh": "手术室护士,仅日班,手术室经验优先,教育制度完善。"
+    }
+  },
+  {
+    "id": "job-007",
+    "title": "循環器内科クリニック 看護師 (パート)",
+    "location": { "prefecture": "東京都", "city": "文京区" },
+    "employmentType": "part_time",
+    "hourlyWageJpy": [1900, 2200],
+    "requirements": { "license": ["RN"], "experienceYears": 3, "nightShift": false },
+    "tags": ["クリニック", "循環器", "経験者優遇", "残業少"],
+    "description": {
+      "ja": "循環器内科クリニック外来。心電図判読・エコーの経験があれば尚可。",
+      "en": "Cardiology clinic outpatient. ECG / echo experience a plus.",
+      "zh": "心内科门诊,有心电图/超声经验者优先。"
+    }
+  },
+  {
+    "id": "job-008",
+    "title": "有料老人ホーム 介護福祉士 (常勤)",
+    "location": { "prefecture": "東京都", "city": "足立区" },
+    "employmentType": "full_time",
+    "hourlyWageJpy": [1700, 2000],
+    "requirements": { "license": ["care_worker"], "experienceYears": 3, "nightShift": true },
+    "tags": ["有料老人ホーム", "夜勤手当高め", "住宅補助", "食事付"],
+    "description": {
+      "ja": "有料老人ホームの介護業務。夜勤手当高水準。住宅補助 3 万円/月。",
+      "en": "Senior living home care work. High night-shift bonus. ¥30k rent subsidy.",
+      "zh": "养老院护理岗,夜班津贴优厚,3万日元/月住房补贴。"
+    }
+  },
+  {
+    "id": "job-009",
+    "title": "訪問介護 ヘルパー (パート)",
+    "location": { "prefecture": "東京都", "city": "杉並区" },
+    "employmentType": "part_time",
+    "hourlyWageJpy": [1600, 1900],
+    "requirements": { "license": ["care_worker"], "nightShift": false },
+    "tags": ["訪問介護", "時短勤務可", "自転車支給", "1日2h〜"],
+    "description": {
+      "ja": "訪問介護。1日2時間からの短時間勤務も相談可。自転車支給。",
+      "en": "In-home care. Short shifts (2h+) negotiable. Bicycle provided.",
+      "zh": "居家护理,可协商短时工作(2小时起),配备自行车。"
+    }
+  },
+  {
+    "id": "job-010",
+    "title": "精神科病院 病棟看護師 (常勤)",
+    "location": { "prefecture": "神奈川県", "city": "川崎市" },
+    "employmentType": "full_time",
+    "hourlyWageJpy": [1900, 2400],
+    "requirements": { "license": ["RN", "LPN"], "experienceYears": 2, "nightShift": true },
+    "tags": ["精神科", "病棟", "教育制度", "残業少"],
+    "description": {
+      "ja": "精神科病棟看護。夜勤月4-5回。プリセプター制度あり。",
+      "en": "Psychiatric ward nursing. 4-5 night shifts/mo. Preceptor system.",
+      "zh": "精神科病房护理,每月4-5次夜班,配有导师制度。"
+    }
+  },
+  {
+    "id": "job-011",
+    "title": "介護老人保健施設 看護師 (常勤)",
+    "location": { "prefecture": "埼玉県", "city": "川口市" },
+    "employmentType": "full_time",
+    "hourlyWageJpy": [1900, 2300],
+    "requirements": { "license": ["RN", "LPN"], "experienceYears": 3, "nightShift": true },
+    "tags": ["老健", "ブランクOK", "託児所あり", "教育制度"],
+    "description": {
+      "ja": "老健の看護業務。ブランクありの方も研修制度で復帰しやすい環境。",
+      "en": "Long-term care facility nursing. Return-to-work training available.",
+      "zh": "老年保健设施护理,提供复职培训,适合返岗人员。"
+    }
+  },
+  {
+    "id": "job-012",
+    "title": "産婦人科クリニック 看護師 (常勤)",
+    "location": { "prefecture": "東京都", "city": "世田谷区" },
+    "employmentType": "full_time",
+    "hourlyWageJpy": [2100, 2600],
+    "requirements": { "license": ["RN"], "experienceYears": 3, "nightShift": false },
+    "tags": ["クリニック", "産婦人科", "助産師優遇", "日祝休"],
+    "description": {
+      "ja": "産婦人科クリニック。分娩あり。助産師資格があれば手当上乗せ。",
+      "en": "Obstetrics/gynecology clinic w/ deliveries. Midwife license bonus.",
+      "zh": "妇产科诊所,含分娩,持有助产士资格可增加津贴。"
+    }
+  },
+  {
+    "id": "job-013",
+    "title": "総合病院 ICU 看護師 (夜勤あり)",
+    "location": { "prefecture": "東京都", "city": "文京区" },
+    "employmentType": "full_time",
+    "hourlyWageJpy": [2600, 3300],
+    "requirements": { "license": ["RN"], "experienceYears": 5, "nightShift": true },
+    "tags": ["急性期", "ICU", "高給", "認定看護師優遇"],
+    "description": {
+      "ja": "ICU での高度看護。認定・専門看護師の資格取得支援あり。",
+      "en": "Advanced ICU nursing. Certified nurse credentialing support.",
+      "zh": "重症监护室高级护理,提供专科护士资格取得支援。"
+    }
+  },
+  {
+    "id": "job-014",
+    "title": "デイケア 介護スタッフ (パート)",
+    "location": { "prefecture": "千葉県", "city": "柏市" },
+    "employmentType": "part_time",
+    "hourlyWageJpy": [1450, 1650],
+    "requirements": { "license": ["care_worker"], "nightShift": false },
+    "tags": ["デイケア", "リハビリ", "日勤", "土日祝休"],
+    "description": {
+      "ja": "デイケアの介護補助。リハビリ職と連携。土日祝休み。",
+      "en": "Day-rehab care support. Work with PT/OT. Weekends & holidays off.",
+      "zh": "日间康复护理助理,与康复师协作,双休及节假日休息。"
+    }
+  },
+  {
+    "id": "job-015",
+    "title": "介護老人保健施設 介護士 (常勤)",
+    "location": { "prefecture": "神奈川県", "city": "相模原市" },
+    "employmentType": "full_time",
+    "hourlyWageJpy": [1550, 1850],
+    "requirements": { "license": ["care_worker"], "experienceYears": 1, "nightShift": true },
+    "tags": ["老健", "資格取得支援", "単身寮あり", "マイカー可"],
+    "description": {
+      "ja": "老健の介護業務。単身寮 (光熱費込 3 万円)。マイカー通勤可。",
+      "en": "Long-term care worker. Company dorm ¥30k inc. utilities. Own car OK.",
+      "zh": "老年保健设施护理,单身宿舍3万含水电,可开车通勤。"
+    }
+  },
+  {
+    "id": "job-016",
+    "title": "派遣 病棟看護師 (短期・夜勤)",
+    "location": { "prefecture": "東京都", "city": "新宿区" },
+    "employmentType": "dispatch",
+    "hourlyWageJpy": [2800, 3500],
+    "requirements": { "license": ["RN"], "experienceYears": 2, "nightShift": true },
+    "tags": ["派遣", "短期OK", "高時給", "夜勤専従あり"],
+    "description": {
+      "ja": "派遣の病棟看護師。1ヶ月〜可、夜勤専従シフトあり。時給高水準。",
+      "en": "Temp ward nurse. 1-month+ terms, night-only shifts available.",
+      "zh": "派遣病房护士,1个月起,可选夜班专职,时薪优厚。"
+    }
+  },
+  {
+    "id": "job-017",
+    "title": "グループホーム 介護スタッフ (常勤)",
+    "location": { "prefecture": "埼玉県", "city": "所沢市" },
+    "employmentType": "full_time",
+    "hourlyWageJpy": [1500, 1750],
+    "requirements": { "license": ["care_worker"], "experienceYears": 1, "nightShift": true },
+    "tags": ["グループホーム", "少人数ケア", "教育制度", "残業少"],
+    "description": {
+      "ja": "認知症対応型グループホーム。1 ユニット 9 名の少人数ケア。",
+      "en": "Dementia group home. 9-resident unit-based care.",
+      "zh": "认知症应对型团体家园,9人小规模照护。"
+    }
+  },
+  {
+    "id": "job-018",
+    "title": "眼科クリニック 看護師 (パート)",
+    "location": { "prefecture": "東京都", "city": "豊島区" },
+    "employmentType": "part_time",
+    "hourlyWageJpy": [1750, 2000],
+    "requirements": { "license": ["RN", "LPN"], "nightShift": false },
+    "tags": ["クリニック", "眼科", "週3〜", "17時終業"],
+    "description": {
+      "ja": "眼科クリニック。週 3 日〜、17 時終業。子育て中の方多数。",
+      "en": "Eye clinic. 3+ days/wk, closes 17:00. Parent-friendly.",
+      "zh": "眼科诊所,每周3天起,17点下班,适合育儿中人员。"
+    }
+  },
+  {
+    "id": "job-019",
+    "title": "訪問看護 契約社員 (夜勤なし)",
+    "location": { "prefecture": "神奈川県", "city": "横浜市青葉区" },
+    "employmentType": "contract",
+    "hourlyWageJpy": [2100, 2500],
+    "requirements": { "license": ["RN"], "experienceYears": 3, "nightShift": false },
+    "tags": ["訪問看護", "契約", "オンコールなし", "1年更新"],
+    "description": {
+      "ja": "訪問看護契約社員。1 年更新、常勤登用実績多数、オンコール免除。",
+      "en": "Home-visit nurse (1-year renewable). Path to full-time. No on-call.",
+      "zh": "居家护理合同员工,1年续签,有转正实绩,免值班。"
+    }
+  },
+  {
+    "id": "job-020",
+    "title": "特別養護老人ホーム 夜勤専従 (パート)",
+    "location": { "prefecture": "千葉県", "city": "松戸市" },
+    "employmentType": "part_time",
+    "hourlyWageJpy": [1800, 2100],
+    "requirements": { "license": ["care_worker"], "experienceYears": 1, "nightShift": true },
+    "tags": ["特養", "夜勤専従", "高時給", "月8回〜"],
+    "description": {
+      "ja": "特養の夜勤専従。月 8 回から相談可。日中の時間を有効活用。",
+      "en": "Nursing home night-only shifts. 8+ shifts/mo. Daytime free.",
+      "zh": "特养夜班专职,每月8次起,白天时间充裕。"
+    }
+  },
+  {
+    "id": "job-021",
+    "title": "皮膚科クリニック 看護師 (常勤)",
+    "location": { "prefecture": "東京都", "city": "目黒区" },
+    "employmentType": "full_time",
+    "hourlyWageJpy": [1900, 2200],
+    "requirements": { "license": ["RN", "LPN"], "nightShift": false },
+    "tags": ["クリニック", "皮膚科", "完全週休二日", "美容医療"],
+    "description": {
+      "ja": "皮膚科・美容皮膚科クリニック。完全週休二日制。美容医療の経験ある方歓迎。",
+      "en": "Dermatology / cosmetic clinic. 2 full days off/wk. Aesthetic exp welcome.",
+      "zh": "皮肤科及美容皮肤科诊所,完全双休,欢迎美容医疗经验者。"
+    }
+  },
+  {
+    "id": "job-022",
+    "title": "小児科クリニック 看護師 (パート)",
+    "location": { "prefecture": "東京都", "city": "台東区" },
+    "employmentType": "part_time",
+    "hourlyWageJpy": [1750, 2050],
+    "requirements": { "license": ["RN"], "experienceYears": 2, "nightShift": false },
+    "tags": ["クリニック", "小児科", "時短可", "予防接種"],
+    "description": {
+      "ja": "小児科クリニック外来。予防接種・乳幼児健診対応。時短相談可。",
+      "en": "Pediatric clinic. Vaccinations & infant checkups. Reduced hours OK.",
+      "zh": "儿科诊所,负责疫苗接种及婴幼儿健诊,可协商短时工作。"
+    }
+  },
+  {
+    "id": "job-023",
+    "title": "大阪 急性期病院 病棟看護師",
+    "location": { "prefecture": "大阪府", "city": "大阪市中央区" },
+    "employmentType": "full_time",
+    "hourlyWageJpy": [1900, 2400],
+    "requirements": { "license": ["RN"], "experienceYears": 3, "nightShift": true },
+    "tags": ["急性期", "病棟", "単身寮", "大阪"],
+    "description": {
+      "ja": "大阪市中央区の急性期病院。単身寮あり (家賃 2 万円)。中之島駅すぐ。",
+      "en": "Osaka acute hospital. Single dorm ¥20k/mo. Near Nakanoshima Station.",
+      "zh": "大阪中央区急诊医院,单身宿舍月租2万,近中之岛站。"
+    }
+  },
+  {
+    "id": "job-024",
+    "title": "サービス付き高齢者住宅 介護スタッフ",
+    "location": { "prefecture": "兵庫県", "city": "神戸市" },
+    "employmentType": "full_time",
+    "hourlyWageJpy": [1500, 1800],
+    "requirements": { "license": ["care_worker"], "experienceYears": 1, "nightShift": true },
+    "tags": ["サ高住", "未経験可", "教育制度", "研修充実"],
+    "description": {
+      "ja": "サービス付き高齢者住宅。介護度低め、未経験でも研修で 3 ヶ月で独り立ち可。",
+      "en": "Elderly service housing. Low care intensity, 3-month training program.",
+      "zh": "服务型高龄住宅,护理级别较低,新人3个月培训可独立上岗。"
+    }
+  },
+  {
+    "id": "job-025",
+    "title": "訪問看護 管理者候補 (常勤)",
+    "location": { "prefecture": "東京都", "city": "世田谷区" },
+    "employmentType": "full_time",
+    "hourlyWageJpy": [2800, 3500],
+    "requirements": { "license": ["RN"], "experienceYears": 7, "nightShift": false },
+    "tags": ["訪問看護", "管理職", "高給", "マネジメント"],
+    "description": {
+      "ja": "訪問看護ステーションの管理者候補。半年〜1 年で所長昇格を想定。",
+      "en": "Home-visit nursing lead. Path to branch manager in 6-12 months.",
+      "zh": "居家护理站管理者候选,预计半年至一年晋升所长。"
+    }
+  }
+]

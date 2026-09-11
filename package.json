@@ -1,0 +1,20 @@
+{
+  "name": "operator-help-demo",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Twilio Voice + Conversation Intelligence operator-assist demo",
+  "scripts": {
+    "dev": "concurrently -n backend,frontend -c cyan,magenta \"npm --prefix backend run dev\" \"npm --prefix frontend run dev\"",
+    "dev:backend": "npm --prefix backend run dev",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "install:all": "npm install && npm --prefix backend install && npm --prefix frontend install",
+    "setup:ci": "npm --prefix backend run setup:ci",
+    "set-webhooks": "npm --prefix backend run set-webhooks",
+    "typecheck": "npm --prefix backend run typecheck && npm --prefix frontend run typecheck",
+    "build:frontend": "npm --prefix frontend run build",
+    "demo": "npm run build:frontend && npm --prefix backend run dev"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  }
+}
