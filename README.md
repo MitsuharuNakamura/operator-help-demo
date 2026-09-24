@@ -183,3 +183,191 @@ MIT License — see [LICENSE](LICENSE)
 ## Disclaimer
 
 これはデモ実装です。本番運用には認証・レート制限・エラーハンドリング・監査ログ・PII マスキング等の追加が必要です。
+
+---
+
+# Operator Help Demo (English)
+
+A **demo implementation of an operator assistance web app** for medical staffing call centers.
+
+By combining Twilio Voice + Twilio Conversation Intelligence (v3) + Conversation Memory, candidate information is automatically extracted during the call, and "the next questions to ask", "confirmed information", and "candidate job openings" are displayed in real-time on the operator's screen.
+
+![License: MIT](https://img.shields.io/badge/license-MIT-green)
+![Node](https://img.shields.io/badge/node-20%2B-brightgreen)
+![Twilio](https://img.shields.io/badge/Twilio-Voice%20%2B%20Conversation%20Intelligence-red)
+
+---
+
+## Features Available in the Demo
+
+- **Live calls**: Make/receive calls from the browser (softphone via `@twilio/voice-sdk`)
+- **Real-time transcription**: `<Start><Transcription>` (switch between Google Speech / Deepgram, model, medical terminology hints, and additional vocabulary from the Setup screen)
+- **Automatic extraction of candidate attributes**: Extracts qualifications / years of experience / preferred work location (prefecture/city) / employment type / night shift availability / desired hourly wage from conversation. If a prefecture name is mistakenly entered into the city field, the backend auto-corrects it
+- **Automatic talk list checking**: Achievement judgment of 9 items — greeting, identity verification, qualifications, experience, work location, employment type, night shift, hourly wage, and next action (executed by the `talklist_check` operator every 3 utterances)
+- **Manual editing of confirmation items + save to Memory**: Human operators can confirm CI-extracted values. After editing, the "Save to Memory" button reflects changes to both the Twilio Conversation Memory `Candidate` trait group and the local contacts.json
+- **Progressive job matching**: Based on extracted attributes, hard filters (qualifications, work location, employment type, night shift) are applied to 25 job master entries, progressively narrowing down (0 candidates at call start → narrows as attributes increase → final 3–4 candidates)
+- **Conversation Memory**: Call content is automatically stored in Twilio Memory, referencing past information for future calls
+- **Multilingual UI**: Switch between Japanese / English / Chinese
+
+## Screen Layout
+
+3-column layout:
+- **Left**: Caller profile + confirmation items (editable, can be saved to Memory)
+- **Center**: Real-time transcription (partial supported)
+- **Right**: List of what to talk about next + job suggestions
+
+## Architecture
+
+```
+[Twilio Voice / Conversations Orchestrator]
+        │
+        │  Automatic call capture via captureRules
+        │  → talklist_check / caller_profile_extract Operator
+        │
+        ▼ Webhook (POST)
+[Node.js Backend (Express + ws)]
+        │
+        ├─ /api/*    : token / contacts / jobs / templates / transcription config
+        ├─ /twilio/* : voice TwiML / transcription content / CI Rule / CI End
+        └─ /ws/live  : push verdict / transcript / call-status to browser
+        │
+        ▼ WebSocket
+[React Frontend (Vite / Zustand / Tailwind)]
+```
+
+## Prerequisites
+
+- Node.js 20+
+- Twilio account (Programmable Voice + Conversation Intelligence v3 + Memory)
+- ngrok account (Hobbyist or higher recommended. Free tier may not handle Real-Time Transcription due to rate limits)
+
+## Setup
+
+### 1. Install dependencies
+
+```bash
+npm run install:all
+```
+
+### 2. Configure Twilio credentials
+
+```bash
+cp backend/.env.example backend/.env
+```
+
+Edit `backend/.env` and enter the following:
+
+```
+TWILIO_ACCOUNT_SID=AC...
+TWILIO_AUTH_TOKEN=...
+TWILIO_API_KEY_SID=SK...    # Console → Account → API keys & tokens → Create (Standard)
+TWILIO_API_KEY_SECRET=...
+TWILIO_CALLER_ID=+81...     # Phone number purchased on Twilio
+NGROK_AUTHTOKEN=...         # Get token from dashboard.ngrok.com
+NGROK_DOMAIN=your-name.ngrok.io  # Reserved domain on paid plan (optional)
+```
+
+### 3. Auto-create Twilio-side resources
+
+```bash
+npm run setup:ci
+```
+
+The following are idempotently created, and generated SIDs are appended to `.env`:
+
+- TwiML App
+- Conversation Memory Store + Candidate Trait Group
+- Intelligence Configuration + 4 Operators + 2 Rules
+- Conversation Configuration + VOICE capture rules
+
+### 4. Launch in development mode
+
+```bash
+npm run dev
+```
+
+- Frontend (Vite HMR): http://localhost:5173
+- Backend + ngrok: http://localhost:4000 → tunnel is automatically established, and Twilio webhooks are auto-synced
+
+### 5. Demo mode (single URL accessible from outside)
+
+```bash
+npm run demo
+```
+
+The frontend is built and served by the backend from `dist/`. The ngrok public URL (`https://<your-domain>.ngrok.io`) provides the full UI + API.
+
+## Demo Flow
+
+1. Open in browser and log in (any name)
+2. In initial setup, select:
+   - UI display language (JA/EN/ZH)
+   - Transcription provider (Google / Deepgram)
+   - Speech model (Google: `long` / `telephony` / `short`, Deepgram: `nova-3-general` / `nova-2`)
+   - Domain vocabulary hints on/off + additional vocabulary
+3. In the Contacts modal, select a candidate or add a new one (optionally register the same 7 items as the checklist, mirrored to the Twilio Memory Candidate trait)
+4. Press call button → live call
+5. During the call:
+   - Real-time transcript in the center (partial → final)
+   - Caller profile card in the upper left shows past observation history retrieved from Memory
+   - Confirmation items in the lower left are automatically filled by CI extraction ("AI Extracted" badge)
+   - If the operator manually edits a value, it switches to a "Manual" badge → won't be overwritten by AI
+   - "Save to Memory" persists the confirmed values to Twilio Memory + contacts.json
+   - Talk list of 9 items in the upper right is automatically checked based on achievement judgment
+   - Jobs in the lower right are progressively narrowed based on extracted attributes (0 → 6 → 5 → 4 → 3 candidates)
+6. After disconnection: post-call summary and sentiment displayed in a modal
+
+## Project Structure
+
+```
+Operator-help-demo/
+├── backend/                # Node.js + Express + ws + twilio SDK
+│   ├── scripts/
+│   │   ├── setup-ci.ts     # Idempotent creation of Twilio resources (Memory Store / Operators / Rules / Conv Config)
+│   │   ├── set-webhooks.ts # Bulk re-sync when ngrok URL changes (usually auto-run on backend startup)
+│   │   └── testmatch.ts    # Job matching simulator CLI
+│   └── src/
+│       ├── routes/         # Endpoints for /api/*, /twilio/*, /ws/live
+│       ├── services/       # twilioClient / ciWebhook / memory / matchJobs / tunnel
+│       │                   # transcription(Hints|Config) / locationNormalize / syncWebhooks etc.
+│       ├── data/           # contacts / jobs / checklist / talklist template (JSON)
+│       └── types/          # Shared types
+├── frontend/               # Vite + React 18 + TS + Tailwind + Zustand + react-i18next
+│   ├── src/
+│   │   ├── screens/        # Login / Setup / Main
+│   │   ├── components/     # TopBar family (including ContactsManagerModal) + various panels
+│   │   ├── store/          # Zustand (useAppStore / useCallStore)
+│   │   ├── api/            # http / live (WS) / twilioClient
+│   │   ├── i18n/           # ja / en / zh
+│   │   └── utils/          # safeAgentId etc.
+│   └── dist/               # Output of `npm run build:frontend`. Backend serves via SPA fallback
+├── docs/
+│   ├── memo.md             # Initial requirements
+│   └── talklist-flow.pptx  # Talk list detection flow explanation slides
+├── LICENSE
+└── README.md
+```
+
+## Key Design Decisions
+
+- **Judgment is complete on the Twilio side**: LLM calls are handled by Twilio Intelligence Operators (`talklist_check` / `caller_profile_extract` / `call_summary` / `sentiment`). Our backend does not hold any OpenAI/Anthropic API keys
+- **Job matching is done in-house**: Extraction results are matched against the job master (`data/jobs.json`) using our matching logic (`services/matchJobs.ts`). The job catalog is not dumped into the prompt
+- **Memory Trait Groups**: Separated into 2 systems — `Contact` (Twilio standard) and `Candidate` (a candidate-specific group defined for this app)
+- **Identifier is phone**: Twilio Memory manages profiles with an internally issued ID (`mem_profile_...`) and cannot be queried by external IDs. We register phone numbers as identifiers and lookup via `GET /Profiles?identifier=<phone>`
+
+## Development Tips
+
+- `backend/scripts/testmatch.ts` — CLI for progressively verifying job matching (`npx tsx scripts/testmatch.ts`)
+- During calls, raw JSON of `caller_profile_extract` and `talklist_check` is logged to the backend, useful for debugging judgments
+- Using an ngrok reserved domain (paid) keeps the URL constant even after backend restart → no need to re-sync webhooks
+- **Twilio Real-Time Transcription's `hints` attribute is incompatible with `speechModel="telephony"`** (returns 32651 "Configuration Rejected"). To use hints in Japanese, select **`speechModel="long"`**. Switchable in the Setup screen; the default in `.env.example` is `long`
+- **Twilio Voice Client identity** only allows `0-9A-Za-z._-`. Japanese operator names are normalized to `agent-<hash>` via the backend's `toSafeAgentId()`
+- ngrok may be blocked in corp Zscaler environments. Webhooks from Twilio Cloud → ngrok do not go through the corp network, so the functionality itself works
+
+## License
+
+MIT License — see [LICENSE](LICENSE)
+
+## Disclaimer
+
+This is a demo implementation. Production use requires additional features such as authentication, rate limiting, error handling, audit logs, and PII masking.

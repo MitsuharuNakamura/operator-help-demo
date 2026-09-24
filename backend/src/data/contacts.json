@@ -26,5 +26,16 @@
     "furigana": "やまもと けんいち",
     "phone": "+819045678901",
     "notes": "正看護師 / 経験15年 / 千葉県在住 / 夜勤希望なし"
+  },
+  {
+    "id": "contact-q77qr0m55c",
+    "name": "中村",
+    "furigana": "なかむら",
+    "phone": "+819099999999",
+    "license": "医師免許",
+    "experienceYears": 0,
+    "preferredEmploymentType": "full_time",
+    "wantsNightShift": false,
+    "hourlyWageMinJpy": 0
   }
 ]
